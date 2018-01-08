@@ -8,7 +8,7 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
 /**
- * Created by BilalKhalid on 8/12/2016.
+ * Created by adeeb on 8/12/2016.
  */
 public class CustomNetworkImageView extends NetworkImageView {
 
