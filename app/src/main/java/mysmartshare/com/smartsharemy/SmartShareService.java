@@ -79,6 +79,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import mysmartshare.com.smartsharemy.adapters.RecyclerAdapter;
 import mysmartshare.com.smartsharemy.adapters.RecyclerSubAdapter;
 import mysmartshare.com.smartsharemy.adapters.SmallGalleryAdapter;
 import mysmartshare.com.smartsharemy.model.Album;

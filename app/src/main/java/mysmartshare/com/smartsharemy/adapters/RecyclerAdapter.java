@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.List;
 
 import mysmartshare.com.smartsharemy.R;
+import mysmartshare.com.smartsharemy.Utilities;
 import mysmartshare.com.smartsharemy.model.Album;
 import mysmartshare.com.smartsharemy.views.CustomNetworkImageView;
 
