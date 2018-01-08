@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
                         900);
             }
         }
+        startService(new Intent(this,SmartShareService.class));
     }
 
 
