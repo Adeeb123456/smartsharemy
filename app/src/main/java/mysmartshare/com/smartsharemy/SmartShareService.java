@@ -87,7 +87,7 @@ import mysmartshare.com.smartsharemy.model.GalleryLocObj;
 import mysmartshare.com.smartsharemy.model.GalleryObj;
 
 /**
- * Created by Bilal on 6/23/2016.
+ * Created by adeeb on 6/23/2016.
  */
 public class SmartShareService extends Service {
 
@@ -100,7 +100,7 @@ public class SmartShareService extends Service {
     private ImageView chatHead;
     WindowManager.LayoutParams params;
 
-    private static ScheduledExecutorService scheduler;
+    private static ScheduledExecutorService scheduledExecutorService;
     private ArrayList<String> packList = new ArrayList<>();
     private int screenWidth;
     private int screenHeight;
@@ -202,7 +202,7 @@ public class SmartShareService extends Service {
     public void onDestroy() {
         super.onDestroy();
 
-        Toast.makeText(getApplicationContext(), "destroy", Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(), "destroy", Toast.LENGTH_LONG).show();
 
         endScheduler();
 
@@ -356,12 +356,12 @@ public class SmartShareService extends Service {
 
 
     private void startScheduler() {
-        if (scheduler != null)
-            scheduler.shutdownNow();
-        scheduler =
+        if (scheduledExecutorService!= null)
+            scheduledExecutorService.shutdownNow();
+        scheduledExecutorService =
                 Executors.newSingleThreadScheduledExecutor();
 
-        scheduler.scheduleAtFixedRate
+        scheduledExecutorService.scheduleAtFixedRate
                 (new Runnable() {
                     public void run() {
                         // call service
@@ -376,9 +376,9 @@ public class SmartShareService extends Service {
 
 
     private void endScheduler() {
-        if (scheduler != null) {
+        if (scheduledExecutorService != null) {
 
-            scheduler.shutdownNow();
+            scheduledExecutorService.shutdownNow();
         }
     }
 
